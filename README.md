@@ -13,7 +13,7 @@ Display a Search Bar as a popup.
 
 Assets can be found in the dist/ directory of this repo.
 
-> CSS should be placed in <code>head</code>, JS should be placed at the end of your document, before </body>
+> CSS should be placed in <code>head</code>, JS should be placed at the end of your document, before the <code>body</code> ending tag.
 
 ```
 <link href="path/to/css/SearchBar.min.css" rel="stylesheet">
