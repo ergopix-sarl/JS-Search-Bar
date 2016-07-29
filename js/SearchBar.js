@@ -6,6 +6,7 @@
 
     var toggler = '[data-toggle="SearchBar"]',
         $SearchBarElement = $($(toggler).data('target')),
+        $SearchBarInput = $SearchBarElement.find('input[type="text"]'),
         isOpen = false;
 
     /**
@@ -43,6 +44,7 @@
      */
     SearchBar.prototype.show = function (e) {
         $SearchBarElement.addClass('searchbar--visible');
+        $SearchBarInput.focus();
         isOpen = true;
     }
 

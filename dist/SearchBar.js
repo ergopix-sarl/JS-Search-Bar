@@ -11,6 +11,7 @@
 
     var toggler = '[data-toggle="SearchBar"]',
         $SearchBarElement = $($(toggler).data('target')),
+        $SearchBarInput = $SearchBarElement.find('input[type="text"]'),
         isOpen = false;
 
     /**
@@ -47,7 +48,9 @@
      * Show the search bar
      */
     SearchBar.prototype.show = function (e) {
+        console.log($SearchBarInput);
         $SearchBarElement.addClass('searchbar--visible');
+        $SearchBarInput.focus();
         isOpen = true;
     }
 
