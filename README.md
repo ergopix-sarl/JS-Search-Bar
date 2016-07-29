@@ -11,6 +11,8 @@ Display a Search Bar as a popup.
 
 ### Include assets
 
+Assets can be found in the dist/ directory of this repo.
+
 > CSS should be placed in <head>, JS should be placed at the end of your document, before </body>
 
 ```
