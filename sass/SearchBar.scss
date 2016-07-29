@@ -1,0 +1,84 @@
+$searchbar-search-bg:           rgba(0,0,0,.7);         // This sets the color of the backdrop when search bar is visible
+$searchbar-form-bg:             #fff;                   //
+$searchbar-max-width:               1170px;                 // Width is responsive, this sets the max-width
+
+.searchbar {
+    display: none;
+    background-color: $searchbar-search-bg;
+}
+.searchbar--visible {
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:9999
+}
+.searchbar__form {
+    width:100%;
+    max-width: $searchbar-max-width;
+    height:60px;
+    background: $searchbar-form-bg;
+    margin: 30vh auto 0 auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,.5);
+
+    /**
+     * Set children items to be displayed in row and vertically aligned.
+     */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.searchbar__field {
+    height:60px;
+    font-size:24px;
+    background:none;
+    border:0;
+
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    &:focus {
+        outline:0;
+    }
+}
+.searchbar__addon {}
+.searchbar__button {
+    position:relative;
+    height:36px;
+    width:30px;
+    padding:0;
+    border:0;
+    background:none;
+
+    &:focus {
+        outline:0;
+    }
+
+    .fa {
+        width:28px;
+        height:28px;
+        font-size:30px;
+        color:#ddd;
+    }
+
+    &--last {
+        border-left:2px solid #ddd;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .searchbar__form {
+        height:96px
+    }
+    .searchbar__field {
+        padding-left:45px;
+        height:96px;
+        font-size:34px
+    }
+    .searchbar__button {
+        height:56px;
+        width:65px;
+    }
+}
