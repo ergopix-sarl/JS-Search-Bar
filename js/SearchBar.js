@@ -53,6 +53,7 @@
      */
     SearchBar.prototype.hide = function (e) {
         $SearchBarElement.removeClass('searchbar--visible');
+        $SearchBarInput.value = ""; //Empty the value
         isOpen = false;
     }
 

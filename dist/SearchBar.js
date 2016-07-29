@@ -48,7 +48,6 @@
      * Show the search bar
      */
     SearchBar.prototype.show = function (e) {
-        console.log($SearchBarInput);
         $SearchBarElement.addClass('searchbar--visible');
         $SearchBarInput.focus();
         isOpen = true;
@@ -59,6 +58,7 @@
      */
     SearchBar.prototype.hide = function (e) {
         $SearchBarElement.removeClass('searchbar--visible');
+        $SearchBarInput.value = ""; //Empty the value
         isOpen = false;
     }
 
