@@ -39,6 +39,11 @@ $searchbar-max-width:               1170px;                 // Width is responsi
     flex-grow: 1;
     flex-shrink: 0;
 
+    // Remove the clearing cross on IE
+    &::-ms-clear {
+        display: none;
+    }
+
     &:focus {
         outline:0;
     }
