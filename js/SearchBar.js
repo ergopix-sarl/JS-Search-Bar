@@ -30,7 +30,7 @@
     }
 
     /**
-     * Hide on escape key up
+     * Hide on overlay clicking
      */
     SearchBar.prototype.overlayClick = function (e) {
         // if the target is the overlay, then close
