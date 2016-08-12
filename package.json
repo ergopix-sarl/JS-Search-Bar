@@ -1,6 +1,6 @@
 {
   "name": "searchbar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Display a Search Bar as a popup.",
   "main": "index.js",
   "author": "Ergopix",
