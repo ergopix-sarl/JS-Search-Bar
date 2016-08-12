@@ -1,6 +1,6 @@
 /**
  * searchbar - Display a Search Bar as a popup.
- * @version v1.0.2
+ * @version v1.0.3
  * @link https://github.com/ergopix-sarl/JS-Search-Bar
  */
 /**
@@ -35,7 +35,7 @@
     }
 
     /**
-     * Hide on escape key up
+     * Hide on overlay clicking
      */
     SearchBar.prototype.overlayClick = function (e) {
         // if the target is the overlay, then close
