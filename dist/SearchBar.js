@@ -1,6 +1,6 @@
 /**
  * searchbar - Display a Search Bar as a popup.
- * @version v1.0.1
+ * @version v1.0.2
  * @link https://github.com/ergopix-sarl/JS-Search-Bar
  */
 /**
