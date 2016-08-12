@@ -32,6 +32,16 @@
     /**
      * Hide on escape key up
      */
+    SearchBar.prototype.overlayClick = function (e) {
+        // if the target is the overlay, then close
+        if ($(e.target).is($SearchBarElement)) {
+            SearchBar.prototype.hide();
+        }
+    }
+
+    /**
+     * Hide on escape key up
+     */
     SearchBar.prototype.escape = function (e) {
         if (isOpen && e.which == 27) {
             e.preventDefault();
@@ -60,6 +70,7 @@
     /**
      * Register events
      */
+    $SearchBarElement.on('click.ergopix.searchbar', SearchBar.prototype.overlayClick);
     $(document).on('click.ergopix.searchbar', toggler, SearchBar.prototype.toggle);
     $(document).on('keyup.ergopix.searchbar', SearchBar.prototype.escape);
 
