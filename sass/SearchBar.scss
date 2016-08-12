@@ -1,6 +1,8 @@
 $searchbar-search-bg:           rgba(0,0,0,.7);         // This sets the color of the backdrop when search bar is visible
-$searchbar-form-bg:             #fff;                   //
-$searchbar-max-width:               1170px;                 // Width is responsive, this sets the max-width
+$searchbar-form-bg:             #fff;                   // This is the background of the form, holding the inputs and buttons
+$searchbar-input-color:         #333;                   // Input color
+$searchbar-buttons-color:       #ddd;                   // Buttons color
+$searchbar-max-width:           1170px;                 // Width is responsive, this sets the max-width
 
 .searchbar {
     display: none;
@@ -16,7 +18,7 @@ $searchbar-max-width:               1170px;                 // Width is responsi
     z-index:9999
 }
 .searchbar__form {
-    width:100%;
+    width:90%;
     max-width: $searchbar-max-width;
     height:60px;
     background: $searchbar-form-bg;
@@ -32,12 +34,13 @@ $searchbar-max-width:               1170px;                 // Width is responsi
 }
 .searchbar__field {
     height:60px;
-    font-size:24px;
+    font-size:20px;
     background:none;
     border:0;
-
-    flex-grow: 1;
-    flex-shrink: 0;
+    padding-left:15px;
+    color: $searchbar-input-color;
+    margin-right: auto;
+    width: 100%;
 
     // Remove the clearing cross on IE
     &::-ms-clear {
@@ -51,7 +54,7 @@ $searchbar-max-width:               1170px;                 // Width is responsi
 .searchbar__addon {}
 .searchbar__button {
     position:relative;
-    height:36px;
+    height:30px;
     width:30px;
     padding:0;
     border:0;
@@ -62,20 +65,18 @@ $searchbar-max-width:               1170px;                 // Width is responsi
     }
 
     .fa {
-        width:28px;
-        height:28px;
-        font-size:30px;
-        color:#ddd;
+        font-size:18px;
+        color: $searchbar-buttons-color;
     }
 
     &--last {
-        border-left:2px solid #ddd;
+        border-left:1px solid $searchbar-buttons-color;
     }
 }
 
 @media screen and (min-width: 768px) {
     .searchbar__form {
-        height:96px
+        height: 96px;
     }
     .searchbar__field {
         padding-left:45px;
@@ -85,5 +86,13 @@ $searchbar-max-width:               1170px;                 // Width is responsi
     .searchbar__button {
         height:56px;
         width:65px;
+
+        .fa {
+            font-size:30px;
+        }
+
+        &--last {
+            border-width: 2px;
+        }
     }
 }
